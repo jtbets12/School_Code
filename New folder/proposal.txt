@@ -1,0 +1,46 @@
+Team Competency:
+ 
+
+      Jacob: Junior, C, Java. Networking Internship with Prime Communications inc.
+
+      Xinlei ( Leo) Yu: C, Java. Course: CprE 185,281,288, ComS 227,228. And #4 semester in college. 
+
+      Justin: Senior, C, Rust, C++, JS/CSS/HTML5
+
+      Jack: Senior, minor C skills, intermediate java, HTML
+
+ 
+
+Project-1
+ 
+
+Name: ClusterCore
+Description: 
+
+Our project is a real-time multiplayer bullet hell game. Connected players will be collected into groups of 4 and can play the game as a team. The problem we are trying to solve is that no one on our team has played a multiplayer bullet hell game, and we want to develop one that quess you up with others online.
+
+The game is split into a backend and frontend. The frontend will handle all of the client I/O (graphics, sound, etc) while the backend will handle all of the networking and multiplayer logic. We are considering developing front-ends for both Android and Web-based clients.
+
+Language/APIs:
+
+Front End: Preferably Javascript for desktop browser, willing to use Java for android if recommended. Browser clients will use socket.io for networking while Android can use UDP directly.
+
+Back End: Interested in using either C++ or Springboot, would like a recommendation.
+
+Large/Complex:
+
+The reason this game is complex enough for 4 people to develop is that we have to make the game system which would have multiple options for a player to customize as well as make the enemies have variation. That along with the multiplayer feature will take up most of our time as a group. The game itself will take a while to make but adding in the multiplayer option allows us to add the customization and a hub world where players can interact with each other. Matchmaking as well would need some thought because you would like to play with people around your skill level or playtime. The game would be played in a group of 4 as you and your team traverse a stage to either fight a boss or escape. Rewards would be awarded based on the player’s performance as well as the team’s performance.
+
+           Networking in a real-time game can be quite complex. Clients can have different bandwidth/latencies and this needs to be accounted for. There are several techniques used in industry, notably lag compensation and client interpolation. These will take much time and planning to implement. Multiplayer games also must detect cheaters and ban them from the game. To support multiple teams and worlds at the same time, the server will benefit from multithreading. To store all player information in the backend we will need to make use of a database. As we add more items and features to the game the database will expand, but at a minimum we will have the following tables:
+
+Users
+User ID (int)
+Username (string)
+Password (salted hash)
+Charstate (string) [base64-encoded character information]
+Last login (datetime)
+Chat
+User ID (int)
+Message type (int) [0 => all chat, 1 => team chat]
+Content (string)
+Timestamp (datetime)
